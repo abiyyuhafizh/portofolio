@@ -1,0 +1,1200 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 10px;
+    font-family: "Nunito", sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 1024px;
+    max-width: 95%;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0F2854;
+    color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+nav .wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 30px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #73A5CA;
+}
+
+/* Hero Section */
+header {
+    height: 110vh;
+    background: url("../images/bgPorto.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-opacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 40, 84, 0.85);
+    z-index: 1;
+}
+
+.header-jumbotron {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.profile {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    margin-bottom: 30px;
+    border: 5px solid rgba(255,255,255,0.3);
+}
+
+.header-jumbotron h4 {
+    font-size: 5rem;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+.header-jumbotron h5 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.button {
+    display: inline-block;
+    background: linear-gradient(45deg, #73A5CA, #1C4D8D);
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    text-decoration: none;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+/* Profile Section */
+#profile {
+    background: linear-gradient(135deg, #1C4D8D 0%, #0F2854 100%);
+    color: #fff;
+    padding: 80px;
+}
+
+#profile h4 {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 40px;
+    font-family: "Lexend Deca", sans-serif;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.desc {
+    background: rgba(255,255,255,0.95);
+    color: #333;
+    padding: 30px 40px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    font-size: 2rem;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.wrapper2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;  /* 2 kolom */
+    grid-template-rows: repeat(2, 1fr) ;     /* 2 baris */
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.experience-card {
+    background: rgba(255,255,255,0.95);
+    color: #333;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+.experience-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.experience-card h5 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #0F2854;
+}
+
+.experience-card small {
+    font-size: 1.6rem;
+    opacity: 0.8;
+}
+
+/* Documentation Section */
+#documentation {
+    background: linear-gradient(135deg, #73A5CA 0%, #A3CDE3 100%);
+    padding: 80px 0;
+    text-align: center;
+}
+
+#documentation h4 {
+    background: rgba(255,255,255,0.9);
+    color: #0F2854;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 3.2rem;
+    margin-bottom: 60px;
+    display: inline-block;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #0F2854;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.card a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    height: 100%;
+}
+
+.img-wrapper {
+    background: #fff;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.card small {
+    display: block;
+    padding: 20px;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+/* ACHIEVEMENT SECTION - DIPERBAIKI */
+#achieve {
+    background: linear-gradient(135deg, #2b2f38 0%, #1a1e24 100%);
+    padding: 80px 0;
+    text-align: center;
+}
+
+#achieve h4 {
+    background: rgba(255,255,255,0.95);
+    color: #0F2854;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 3.2rem;
+    margin-bottom: 60px;
+    display: inline-block;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.achieve-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.achieve-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 25px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+    height: 420px; /* Tinggi sama untuk semua card */
+}
+
+.achieve-card:hover {
+    transform: translateY(-20px) scale(1.02);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+    background: rgba(255,255,255,0.1);
+}
+
+.achieve-card a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    height: 100%;
+    position: relative;
+}
+
+.achieve-image {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.achieve-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.achieve-card:hover .achieve-image img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(15,40,84,0.9), rgba(115,165,202,0.8));
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.achieve-card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay i {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.achieve-title {
+    padding: 20px;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+}
+
+.achieve-title h5 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* LIGHTBOX - DIPERBAIKI */
+.lb-overlay {
+    background: rgba(15, 40, 84, 0.95) ;
+}
+
+.lb-close {
+    top: 30px ;
+    right: 30px ;
+    width: 60px ;
+    height: 60px ;
+    background: rgba(255,255,255,0.2) ;
+    border-radius: 50% ;
+    backdrop-filter: blur(20px) ;
+    border: 2px solid rgba(255,255,255,0.3) ;
+    font-size: 2.5rem ;
+    color: #fff ;
+    transition: all 0.3s ease ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+}
+
+.lb-close:hover {
+    background: rgba(255,255,255,0.4) ;
+    transform: scale(1.1) rotate(90deg) ;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4) ;
+}
+
+.lb-prev, .lb-next {
+    width: 60px ;
+    height: 60px ;
+    background: rgba(255,255,255,0.2) ;
+    border-radius: 50% ;
+    backdrop-filter: blur(20px) ;
+    border: 2px solid rgba(255,255,255,0.3) ;
+    transition: all 0.3s ease ;
+}
+
+.lb-prev:hover, .lb-next:hover {
+    background: rgba(255,255,255,0.4) ;
+    transform: scale(1.1) ;
+}
+
+.lb-image {
+    border-radius: 20px ;
+    box-shadow: 0 30px 100px rgba(0,0,0,0.8) ;
+    max-height: 90vh ;
+}
+
+.lb-caption {
+    font-size: 2.2rem ;
+    font-weight: 600 ;
+    color: #fff ;
+    background: rgba(0,0,0,0.8) ;
+    padding: 25px ;
+    border-radius: 20px ;
+    backdrop-filter: blur(20px) ;
+    border: 1px solid rgba(255,255,255,0.1) ;
+    font-family: "Lexend Deca", sans-serif ;
+}
+
+/* CONTACT SECTION */
+#contact {
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 5px 0;
+}
+
+#contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(115,165,202,0.5), transparent);
+}
+
+#contact h4 {
+    background: linear-gradient(45deg, #73A5CA, #A3CDE3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 800;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+#contact h4 span {
+    background: linear-gradient(45deg, #73A5CA, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Contact Hero */
+.contact-hero {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-photo {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+}
+
+.contact-photo img {
+    width: 120%;
+    height: 120%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255,255,255,0.2);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.photo-ring {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #73A5CA, #A3CDE3) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    animation: rotate 20s linear infinite;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.contact-info h5 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+}
+
+.contact-info p {
+    font-size: 2rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.8rem;
+    color: rgba(255,255,255,0.9);
+}
+
+.detail-item i {
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(45deg, #73A5CA, #A3CDE3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+/* Social Media Cards */
+.contact-social {
+    max-width: 1000px;
+    margin: 0 auto 60px;
+}
+
+/* Social Media - 3 BOX SATU BARIS */
+.social-grid {
+    display: grid ;
+    grid-template-columns: repeat(3, 1fr) ;  /* 3 KOLOM SAMA */
+    gap: 25px ;
+    max-width: 1200px ;
+    margin: 0 auto ;
+    justify-items: center ;
+}
+
+.social-card {
+    display: flex ;
+    align-items: center ;
+    gap: 20px ;
+    padding: 30px 25px ;  /* Lebih compact */
+    border-radius: 20px ;
+    text-decoration: none ;
+    color: #fff ;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) ;
+    backdrop-filter: blur(20px) ;
+    border: 1px solid rgba(255,255,255,0.15) ;
+    position: relative ;
+    overflow: hidden ;
+    width: 100% ;
+    max-width: 380px ;  /* Lebar maksimal sama */
+    height: 120px ;    /* TINGGI SAMA UNTUK 3 BOX */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3) ;
+}
+
+/* .social-card::before {
+    content: '' ;
+    position: absolute ;
+    top: 0 ;
+    left: -100% ;
+    width: 100% ;
+    height: 100% ;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent) ;
+    transition: left 0.7s ;
+} */
+
+.social-card:hover::before {
+    left: 100% ;
+}
+
+.social-card:hover {
+    transform: translateY(-12px) scale(1.05) ;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5) ;
+    border-color: rgba(255,255,255,0.4) ;
+}
+
+/* ICON SIZE */
+.social-icon {
+    width: 65px ;
+    height: 65px ;
+    border-radius: 18px ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    font-size: 2.5rem ;
+    flex-shrink: 0 ;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4) ;
+    /* transition: all 0.3s ease ; */
+}
+
+.social-card:hover .social-icon {
+    transform: scale(1.15) rotate(360deg) ;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5) ;
+}
+
+.social-text h6 {
+    font-size: 2rem ;
+    font-weight: 700 ;
+    margin-bottom: 5px ;
+    font-family: "Lexend Deca", sans-serif ;
+    white-space: nowrap ;
+}
+
+.social-text p {
+    font-size: 1.6rem ;
+    opacity: 0.9 ;
+    margin: 0 ;
+    font-weight: 500 ;
+}
+
+/* Colors tetap sama */
+.email-card { background: rgba(255, 107, 107, 0.2); border-color: rgba(255, 107, 107, 0.4); }
+.email-card:hover { background: rgba(255, 107, 107, 0.35); }
+.linkedin-card { background: rgba(0, 119, 181, 0.2); border-color: rgba(0, 119, 181, 0.4); }
+.linkedin-card:hover { background: rgba(0, 119, 181, 0.35); }
+.instagram-card { background: rgba(225, 48, 108, 0.2); border-color: rgba(225, 48, 108, 0.4); }
+.instagram-card:hover { background: rgba(225, 48, 108, 0.35); }
+
+
+/* Download CV Button */
+.contact-cta {
+    text-align: center;
+}
+
+.download-cv {
+    background: linear-gradient(45deg, #73A5CA, #1C4D8D);
+    padding: 20px 50px ;
+    font-size: 2.2rem ;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* .download-cv:hover {
+    transform: translateY(-5px) scale(1.05) ;
+    box-shadow: 0 20px 60px rgba(115,165,202,0.4) ;
+} */
+
+/* 
+        copyright
+*/
+
+footer {
+    background-color: #202940;
+    color: #fff;
+    text-align: center;
+}
+
+footer > .wrapper {
+    padding: 20px 0px 20px 0px;
+    font-size: 1.4rem;
+}
+
+/* RESPONSIVE */
+/* @media (max-width: 992px) {
+    .contact-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .social-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}
+
+/* 
+        Responsive 1024, 900, 768, 600, 450
+*/
+
+/* RESPONSIVE DESIGN - MOBILE FIRST */
+@media (max-width: 1024px) {
+    .wrapper {
+        width: 95%;
+        padding: 30px 15px;
+    }
+    
+    nav .wrapper {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .menu ul {
+        gap: 25px;
+    }
+    
+    .menu ul li a {
+        font-size: 1.6rem;
+    }
+    
+    .wrapper2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        max-width: 600px;
+    }
+    
+    .achieve-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        max-width: 700px;
+    }
+    
+    .achieve-card {
+        height: 380px;
+    }
+    
+    .achieve-image {
+        height: 280px;
+    }
+}
+
+@media (max-width: 900px) {
+    html, body {
+        font-size: 9.5px;
+    }
+    
+    header {
+        height: 90vh;
+    }
+    
+    .header-jumbotron h4 {
+        font-size: 4.2rem;
+    }
+    
+    .header-jumbotron h5 {
+        font-size: 2.4rem;
+    }
+    
+    #profile, #documentation {
+        padding: 60px 20px;
+    }
+    
+    .items {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    html, body {
+        font-size: 9px;
+    }
+    
+    /* Navigation */
+    nav .wrapper {
+        padding: 15px;
+    }
+    
+    .menu ul {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .menu ul li a {
+        font-size: 1.5rem;
+    }
+    
+    /* Hero */
+    header {
+        height: 85vh;
+    }
+    
+    .profile {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 20px;
+    }
+    
+    .header-jumbotron h4 {
+        font-size: 3.5rem;
+    }
+    
+    .header-jumbotron h5 {
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+    }
+    
+    .button {
+        padding: 12px 35px;
+        font-size: 1.8rem;
+    }
+    
+    /* Profile Section */
+    #profile {
+        padding: 50px 20px;
+    }
+    
+    #profile h4 {
+        font-size: 3.2rem;
+        margin-bottom: 30px;
+    }
+    
+    .desc {
+        padding: 25px 30px;
+        font-size: 1.8rem;
+    }
+    
+    /* Documentation */
+    #documentation h4 {
+        font-size: 2.8rem;
+        padding: 12px 30px;
+    }
+    
+    /* Achievement */
+    .achieve-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        max-width: 400px;
+    }
+    
+    .achieve-card {
+        height: 350px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .achieve-image {
+        height: 260px;
+    }
+    
+    /* Contact Section */
+    .contact-hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+        max-width: 500px;
+    }
+    
+    .contact-photo {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .contact-info h5 {
+        font-size: 2.6rem;
+    }
+    
+    .contact-info p {
+        font-size: 1.8rem;
+    }
+    
+    /* Social Grid - 1 kolom di mobile */
+    .social-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 400px;
+    }
+    
+    .social-card {
+        max-width: 100%;
+        height: 110px;
+        padding: 25px 20px;
+    }
+    
+    .social-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 2.2rem;
+    }
+    
+    .social-text h6 {
+        font-size: 1.8rem;
+    }
+    
+    .social-text p {
+        font-size: 1.5rem;
+    }
+    
+    .download-cv {
+        padding: 18px 40px;
+        font-size: 2rem;
+    }
+    
+    #contact h4 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    html, body {
+        font-size: 8.5px;
+    }
+    
+    .wrapper {
+        padding: 20px 10px;
+    }
+    
+    /* Hero */
+    header {
+        height: 75vh;
+    }
+    
+    .profile {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .header-jumbotron h4 {
+        font-size: 3rem;
+        margin-bottom: 8px;
+    }
+    
+    .header-jumbotron h5 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .button {
+        padding: 10px 30px;
+        font-size: 1.6rem;
+    }
+    
+    /* Sections */
+    #profile, #documentation, #achieve {
+        padding: 40px 15px;
+    }
+    
+    #profile h4, #documentation h4, #achieve h4 {
+        font-size: 2.6rem;
+        padding: 10px 25px;
+        margin-bottom: 25px;
+    }
+    
+    .desc {
+        padding: 20px 25px;
+        font-size: 1.7rem;
+        margin-bottom: 30px;
+    }
+    
+    .experience-card {
+        padding: 25px 20px;
+    }
+    
+    .experience-card h5 {
+        font-size: 2rem;
+    }
+    
+    /* Contact */
+    .contact-photo {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .contact-info h5 {
+        font-size: 2.4rem;
+    }
+    
+    .detail-item {
+        font-size: 1.6rem;
+        gap: 12px;
+    }
+    
+    .detail-item i {
+        width: 30px;
+        height: 30px;
+        font-size: 1.4rem;
+    }
+    
+    /* Social */
+    .social-card {
+        padding: 20px 18px;
+        height: 100px;
+        gap: 15px;
+    }
+    
+    .social-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+    
+    .social-text h6 {
+        font-size: 1.6rem;
+    }
+    
+    .social-text p {
+        font-size: 1.4rem;
+    }
+    
+    /* Lightbox */
+    .lb-close {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .lb-prev, .lb-next {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .lb-caption {
+        font-size: 1.8rem;
+        padding: 20px;
+    }
+    #doc-popup .popup-inner {
+        padding: 30px 25px ;
+        margin: 10px;
+    }
+    
+    #doc-popup h3 {
+        font-size: 2rem ;
+    }
+    
+    #doc-popup p {
+        font-size: 1.5rem ;
+    }
+    
+    #doc-popup .popup-icon {
+        font-size: 3.5rem ;
+    }
+    
+    /* #doc-popup .popup-close {
+        padding: 12px 30px ;
+        font-size: 1.6rem ;
+    } */
+}
+
+@media (max-width: 450px) {
+    html, body {
+        font-size: 8px;
+    }
+    
+    /* Navigation */
+    .menu ul {
+        gap: 15px;
+    }
+    
+    .menu ul li a {
+        font-size: 1.4rem;
+    }
+    
+    /* Hero */
+    .profile {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .header-jumbotron h4 {
+        font-size: 2.6rem;
+    }
+    
+    .header-jumbotron h5 {
+        font-size: 1.8rem;
+    }
+    
+    /* All sections */
+    #profile h4, #documentation h4, #achieve h4, #contact h4 {
+        font-size: 2.4rem;
+    }
+    
+    .desc {
+        font-size: 1.6rem;
+        padding: 18px 20px;
+    }
+    
+    /* Contact */
+    .contact-hero {
+        gap: 30px;
+    }
+    
+    .contact-photo {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .contact-info h5 {
+        font-size: 2.2rem;
+    }
+    
+    .social-card {
+        height: 95px;
+        padding: 18px 15px;
+        gap: 12px;
+    }
+    
+    .social-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.8rem;
+    }
+    
+    .social-text h6 {
+        font-size: 1.5rem;
+    }
+    
+    .social-text p {
+        font-size: 1.3rem;
+    }
+    
+    .download-cv {
+        padding: 15px 35px;
+        font-size: 1.8rem;
+    }
+    
+    /* Cards */
+    .experience-card {
+        padding: 20px 15px;
+    }
+    
+    .card img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .achieve-card {
+        height: 320px;
+    }
+    
+    .achieve-image {
+        height: 240px;
+    }
+    #doc-popup .popup-inner {
+        width: 95% !important;
+        padding: 25px 20px !important;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+    .wrapper {
+        padding: 15px 8px;
+    }
+    
+    .profile {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .header-jumbotron h4 {
+        font-size: 2.4rem;
+    }
+    
+    #profile h4, #documentation h4, #achieve h4 {
+        font-size: 2.2rem;
+        padding: 8px 20px;
+    }
+    
+    .social-card {
+        padding: 15px 12px;
+        height: 90px;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+    header {
+        height: 60vh;
+    }
+    
+    .header-jumbotron h4 {
+        font-size: 2.8rem;
+    }
+    
+    .header-jumbotron h5 {
+        font-size: 1.8rem;
+    }
+}
